@@ -1,0 +1,16 @@
+.card{
+  background-color: #0070f3 ;
+  height: 25vh;
+}
+
+.topBar{
+  background-color: rebeccapurple;
+}
+
+.itemBar{
+  background-color: aquamarine;
+}
+
+.outputBody{
+  background-color: brown;
+}

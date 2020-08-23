@@ -1,0 +1,7 @@
+.container{
+  width: calc(100vw - (100vw * 17.5/100));
+}
+
+.editor{
+  width: 100%;
+}
