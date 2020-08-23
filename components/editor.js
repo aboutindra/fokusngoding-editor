@@ -46,7 +46,7 @@ const CodeEditor = () => {
       // Send Axios request here
       let data = await axios.post('http://localhost:4000/api/v1/compiler/javascript/run', { 'code' : code })
       setOutput(data.data)
-    }, 1000)
+    }, 1)
 
     return () => clearTimeout(delayDebounceFn)
   }, [code])
@@ -56,7 +56,7 @@ const CodeEditor = () => {
       <ReactAce
           width={width - (width * 17.5/100)}
           height={height - (height * 25/100)}
-          value="function p(){ console.log('Test' } p()"
+          placeholder="function p(){ console.log('Test' } p()"
           mode="javascript"
           theme="monokai"
           onChange={(e) => setCode(e)}
