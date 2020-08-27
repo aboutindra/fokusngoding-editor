@@ -12,5 +12,9 @@
 }
 
 .outputBody{
-  background-color: brown;
+  background-color: #3a3a3a;
+  height: 21vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  white-space: pre-line;
 }

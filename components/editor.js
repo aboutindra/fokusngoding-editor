@@ -44,9 +44,13 @@ const CodeEditor = () => {
     const delayDebounceFn = setTimeout(async() => {
       console.log(code)
       // Send Axios request here
-      let data = await axios.post('http://localhost:4000/api/v1/compiler/javascript/run', { 'code' : code })
-      setOutput(data.data)
-    }, 1)
+
+      if(code !== 'Your output..'){
+        let data = await axios.post('http://localhost:4000/api/v1/compiler/javascript/run', { 'code' : code })
+        setOutput(data.data)
+      }
+
+    }, 1000)
 
     return () => clearTimeout(delayDebounceFn)
   }, [code])
